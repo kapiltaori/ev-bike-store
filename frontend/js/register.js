@@ -12,7 +12,7 @@ $(document).ready(function() {
         success: function(data) {
           const d = JSON.parse(data);
             if (d.message) {
-              const message = `<div class="alert alert-success" role="alert">${d.message}. <span>Click to <a href="/login.html">Login</a></span></div>`;
+              const message = `<div class="alert alert-success" role="alert">${d.message}. <span>Click to <a href="login.html">Login</a></span></div>`;
               $('#response').append(message);
             } else if (d.error) {
               const message = `<div class="alert alert-danger" role="alert">${d.error}. Please try again later.</div>`;
