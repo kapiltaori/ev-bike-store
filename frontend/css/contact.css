@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.contact-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+.contact-form .form-control {
+    border-radius: 0;
+}
+.contact-form .btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0;
+}
+.contact-details {
+    margin-top: 30px;
+    font-size: 1.2em;
+}

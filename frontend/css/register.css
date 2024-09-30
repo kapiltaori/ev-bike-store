@@ -1,0 +1,14 @@
+.text-white {
+  color: #fff;
+}
+
+.btn-theme {
+  background-color: #37b234;
+  color: #fff;
+}
+
+.btn-theme:hover {
+  background-color: #37b234;
+  color: #fff;
+  outline: 1px solid #000;
+}

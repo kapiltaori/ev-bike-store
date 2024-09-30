@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.about-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.about-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+.team-section, .products-section {
+    padding: 50px;
+    text-align: center;
+}
+.team-section h2, .products-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.team-member, .product-item {
+    margin: 20px;
+}
+.team-member img, .product-item img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.team-member h3, .product-item h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+.team-member p, .product-item p {
+    color: #777;
+}
