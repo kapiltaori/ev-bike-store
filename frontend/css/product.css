@@ -1,0 +1,14 @@
+.text-theme {
+  color: #37b234;
+}
+.filter-btn {
+  background-color: grey;
+  color: white;
+  border: none;
+  outline: none;
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #37b234;
+  color: white;
+}

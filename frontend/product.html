@@ -12,11 +12,21 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/product.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <!--  owl css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!--  owl css -->
   </head>
   <body>
     <!-- Fixed Header -->
@@ -24,7 +34,7 @@
       <div class="container-fluid mx-3">
         <a
           class="navbar-brand d-flex flex-column align-items-center justify-content-center"
-          href="/"
+          href="index.html"
         >
           <img src="./image/battre_logo.png" alt="Brand Logo" />
           <span class="navbar-brand-text mt-1 fw-bold">Electric Vehicles</span>
@@ -48,12 +58,12 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="product.html"
+              <a class="nav-link active" aria-current="page" href="product.html"
                 ><i class="fas fa-motorcycle"></i> Products</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="about.html"
+              <a class="nav-link" href="about.html"
                 ><i class="fas fa-info-circle"></i> About</a
               >
             </li>
@@ -88,98 +98,35 @@
         </div>
       </div>
     </nav>
-    <div class="about-section mt-5">
-      <h1>About Battire</h1>
-      <div class="d-flex gap-5 mt-5 mx-3">
-        <p class="w-50">
-          <i class="fa-regular fa-hand-point-right text-warning"></i> Welcome to
-          Battire, your premier destination for cutting-edge electric vehicles.
-          Our mission is to revolutionize transportation by providing
-          eco-friendly, high-performance electric bikes that cater to the needs
-          of modern commuters.
-        </p>
-        <p class="w-50">
-          <i class="fa-regular fa-hand-point-right text-warning"></i> At
-          Battire, we are committed to innovation, sustainability, and customer
-          satisfaction. Our team of experts is dedicated to designing and
-          manufacturing electric vehicles that not only reduce carbon footprints
-          but also offer a thrilling riding experience.
-        </p>
-      </div>
-      <h2 class="mb-3 mt-5">
-        We proudly operate in <strong>21 states</strong> with a robust network
-        of
-        <strong>400 outlets</strong>
-      </h2>
-      <h3>
-        Our scooters are designed and developed in India
-        <span class="flag"></span> with over 20 Design Patents Received.
-      </h3>
-    </div>
+    <div class="product-section my-5 py-5">
+      <h1 class="text-center text-theme">Products</h1>
+      <div class="container mt-5">
+        <div
+          class="btn-group align-items-center justify-content-center w-100"
+          role="group"
+          aria-label="Filter Buttons"
+        >
+          <button type="button" class="btn filter-btn active" data-filter="all">
+            All
+          </button>
+          <button type="button" class="btn filter-btn" data-filter="one">
+            One
+          </button>
+          <button type="button" class="btn filter-btn" data-filter="epic">
+            Epic
+          </button>
+          <button type="button" class="btn filter-btn" data-filter="loev">
+            Loev
+          </button>
+          <button type="button" class="btn filter-btn" data-filter="storie">
+            Storie
+          </button>
+        </div>
 
-    <div class="products-section">
-      <h2 class="text-theme">Our Scooters</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-3 product-item">
-          <img src="./image/one_1.jpg" alt="One" />
-          <h3>One</h3>
-          <p>Bold, confident and tall.</p>
-        </div>
-        <div class="col-md-3 product-item">
-          <img src="./image/storie_4.jpg" alt="Storie" />
-          <h3>Storie</h3>
-          <p>Storie: Classic design meets contemporary electric performance</p>
-        </div>
-        <div class="col-md-3 product-item">
-          <img src="./image/loev_2.jpg" alt="Loev" />
-          <h3>Loev</h3>
-          <p>
-            Premium Affordable Electric Scooter. All you need is LO:EV Commuting
-            Made Easy
-          </p>
-        </div>
-        <div class="col-md-3 product-item">
-          <img src="./image/epic_1.jpg" alt="Epic" />
-          <h3>Epic</h3>
-          <p>
-            Storie Epic: Classic design meets contemporary electric performance
-          </p>
-        </div>
+        <div class="row mt-4 row-gap-4 latest" id="product-list"></div>
       </div>
     </div>
 
-    <div class="team-section">
-      <h2 class="text-theme">Our Team</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-3 team-member">
-          <img src="./image/teams/kumar-1.png" alt="Team Member 1" />
-          <h3>Kumar Abhishek</h3>
-          <p>COO - Supply Chain & Manufacturing</p>
-        </div>
-        <div class="col-md-3 team-member">
-          <img src="./image/teams/nischal-1.png" alt="Team Member 2" />
-          <h3>Nishchal Chaudhary</h3>
-          <p>CEO, MD</p>
-        </div>
-        <div class="col-md-3 team-member">
-          <img src="./image/teams/Gajendra.png" alt="Team Member 3" />
-          <h3>Gajendra Chandel</h3>
-          <p>Non Executive Director</p>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-3 team-member">
-          <img src="./image/teams/pankaj-1.png" alt="Team Member 4" />
-          <h3>Pankaj Sharma</h3>
-          <p>COO - Growth</p>
-        </div>
-        <div class="col-md-3 team-member">
-          <img src="./image/teams/Kshitija.png" alt="Team Member 5" />
-          <h3>Kshitija Karnik</h3>
-          <p>CCO</p>
-        </div>
-      </div>
-    </div>
     <footer>
       <div class="scontainer grid">
         <div class="box">
@@ -241,6 +188,8 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <!--  animejs -->
     <script src="./js/global.js"></script>
+    <script src="./js/product.js"></script>
   </body>
 </html>
