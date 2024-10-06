@@ -10,6 +10,7 @@ $(document).ready(function() {
         processData: false,
         contentType: false,
         success: function(data) {
+          $("#registerForm")[0].reset();
           const d = JSON.parse(data);
             if (d.message) {
               const message = `<div class="alert alert-success" role="alert">${d.message}. <span>Click to <a href="login.html">Login</a></span></div>`;

@@ -12,3 +12,37 @@
   background-color: #37b234;
   color: white;
 }
+
+.bg-white {
+  background: #fff;
+}
+h2 span#actualAmount {
+  margin-right: 5px;
+}
+h2 span#discountedAmount {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: white;
+}
+.product-detail-section .product-img {
+  text-align: center;
+}
+.product-detail-section img {
+  width: 350px;
+}
+.color-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  border: #e4e4e4 1px solid;
+  box-shadow: var(--grey, #e4e4e4) 0 0 1px 1px;
+}
+.color-circle.selected {
+  border: 7px solid grey;
+}
+.filter-item .box .details {
+  text-align: center;
+}

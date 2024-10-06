@@ -9,11 +9,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit(0);
 }
 
-// SQL to retrieve products and their images
+// SQL to retrieve products, their images, and colors
 $sql = "
-SELECT p.id, p.name, p.price, p.description, p.kms_per_charge, p.discount, p.is_popular, p.is_vehicle, pi.image_url
+SELECT p.id, p.name, p.price, p.description, p.kms_per_charge, p.discount, p.is_popular, p.is_vehicle,
+GROUP_CONCAT(DISTINCT pi.image_url) as images,
+GROUP_CONCAT(DISTINCT pc.color) as colors
 FROM products p
 LEFT JOIN product_images pi ON p.id = pi.product_id
+LEFT JOIN product_colors pc ON pi.color_id = pc.id
+GROUP BY p.id, p.name
 ";
 
 $result = $conn->query($sql);
@@ -32,10 +36,10 @@ if ($result->num_rows > 0) {
                 'discount' => $row['discount'],
                 'is_popular' => $row['is_popular'],
                 'is_vehicle' => $row['is_vehicle'],
-                'images' => []
+                'images' => explode(',', $row['images']),
+                'colors' => explode(',', $row['colors'])
             ];
         }
-        $products[$product_id]['images'][] = $row['image_url'];
     }
 }
 
