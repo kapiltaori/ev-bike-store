@@ -20,8 +20,8 @@ body {
   text-align: center;
 }
 
-.ml-20 {
-  margin-left: 20rem;
+.ml-5 {
+  margin-left: 5rem;
 }
 
 .container {
@@ -67,7 +67,7 @@ body {
   }
 
   nav ul li a {
-    line-height: 40px;
+    line-height: 20px;
     display: table;
   }
 
@@ -132,10 +132,11 @@ button {
   content: "";
   position: absolute;
   top: 0;
-  background-image: url("../image/slide.png");
+  /* background-image: url("../image/slide.png"); */
+  background-color: #37b234;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 105vh;
   width: 100%;
   z-index: -1;
 }
@@ -147,13 +148,15 @@ button {
   border-radius: 10px;
 }
 
-.time_box h1 {
+.time_box h1,
+.time_box h1 span {
   font-size: 50px;
   margin-left: 10px;
 }
 
 @media only screen and (min-width: 1400px) {
-  .time_box h1 {
+  .time_box h1,
+  .time_box h1 span {
     font-size: 35px;
     margin-left: 10px;
   }
@@ -172,7 +175,7 @@ button {
 /*----------home--------*/
 /*----------latest--------*/
 .top {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .mtop {
@@ -182,7 +185,7 @@ button {
 .heading {
   text-align: center;
   position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 50px;
 }
 
 .heading h1 {
@@ -239,7 +242,7 @@ button {
 }
 
 .latest .scontainer {
-  padding: 50px;
+  padding: 0;
   text-align: center;
 }
 
@@ -324,7 +327,7 @@ ul {
 .slider ul li {
   font-size: 22px;
   opacity: 0.8;
-  margin-top: 15px;
+  margin-top: 10px;
   white-space: 5px;
 }
 
@@ -356,16 +359,7 @@ ul {
 }
 
 /*----------slider--------*/
-/*----------Popular--------*/
-.Popular {
-  color: black;
-}
 
-.Popular.latest {
-  background: none;
-}
-
-/*----------Popular--------*/
 /*----------wrapper--------*/
 .wrapper {
   background-image: url("../image/back.jpg");
@@ -613,4 +607,8 @@ footer .social_media i {
   font-weight: 600;
   font-size: 2em;
   line-height: 1.1;
+}
+.vertical-line {
+  border-left: 2px solid white;
+  height: 35px;
 }

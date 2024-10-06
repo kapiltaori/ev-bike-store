@@ -22,12 +22,49 @@ $(document).ready(function () {
           discountedAmount
         )}`
       );
+      $("#discountText").html(
+        `${
+          product?.discount
+            ? "Discount: " + parseInt(product?.discount) + "%"
+            : ""
+        }`
+      );
       $("#productImage").attr(
         "src",
         `./image/products/${productName}/${productName}_${color
           ?.replace(" ", "_")
           ?.toLowerCase()}.png`
       );
+
+      $("#productDetails")
+        .html(`<div class="row align-items-center justify-content-center">
+                <div class="col-4 text-center mb-3">
+                  <div class="fw-bold">Riding Range</div>
+                  <div class="">${product?.kms_per_charge || 0} kms</div>
+                </div>
+                <div class="col-4 text-center mb-3">
+                  <div class="fw-bold">Charging Time</div>
+                  <div class="">${product?.full_charge_in_hrs || 0} hrs</div>
+                </div>
+                <div class="col-4 text-center mb-3">
+                  <div class="fw-bold">Top Speed</div>
+                  <div>${product.top_speed || 0} kmph</div>
+                </div>
+                <div class="col-4 text-center mb-3">
+                  <div class="fw-bold">Panel</div>
+                  <div>${product?.panel}</div>
+                </div>  
+                <div class="col-4 text-center mb-3">
+                  <div class="fw-bold">Battery</div>
+                  <div>${product?.battery}</div>
+                </div>
+                <div class="col-4 text-center mb-3">
+                  <div class="fw-bold">Battery Warranty</div>
+                  <div>${product?.battery_warranty}</div>
+                </div>
+              </div>
+              
+              `);
 
       let descriptionHTML = "";
       product.description.split(",").forEach((desc) => {
@@ -67,9 +104,15 @@ $(document).ready(function () {
   }
 
   $("#bookNowBtn, #bookTestDriveBtn").click(function () {
+    const user = localStorage.getItem("user");
+    const userData = user ? JSON.parse(user) : null;
     const actionType =
       $(this).attr("id") === "bookNowBtn" ? "Book Now" : "Book Test Drive";
+    $("#isBooking").val($(this).attr("id") === "bookNowBtn");
     $("#bookingModalLabel").text(actionType);
+    $("#bookingForm #name").val(userData?.username);
+    $("#bookingForm #email").val(userData?.email);
+    $("#alertContainer").text("");
     $("#bookingModal").modal("show");
   });
 
@@ -79,13 +122,22 @@ $(document).ready(function () {
       url: "http://localhost/ev-bike-store/backend/booking.php",
       type: "POST",
       data: $(this).serialize(),
-      success: function () {
+      success: function (response) {
+        const res = JSON.parse(response);
         $("#bookingModal").modal("hide");
-        alert("Thanks for showing the interest and will get back to you.");
+        const isBooking = $(this).attr("id") === "bookNowBtn";
+        console.log("isBooking", isBooking);
+        $("#alertContainer").html(
+          '<div class="alert alert-success" role="alert">' +
+            res?.message +
+            "</div>"
+        );
         $("#bookingForm")[0].reset();
       },
       error: function () {
-        alert("There was an error processing your request.");
+        $("#alertContainer").html(
+          '<div class="alert alert-danger" role="alert">There was an error processing your request. Please try again</div>'
+        );
       },
     });
   });

@@ -14,7 +14,7 @@ $product_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 if ($product_id > 0) {
     // SQL to retrieve product, its images, and colors by ID
     $sql = "
-    SELECT p.id, p.name, p.price, p.description, p.kms_per_charge, p.discount, p.is_popular, p.is_vehicle, pi.image_url, pc.color, pc.color_code
+    SELECT p.id, p.name, p.price, p.description, p.kms_per_charge, p.discount, p.is_popular, p.is_vehicle, pi.image_url, pc.color, pc.color_code,p.top_speed,p.full_charge_in_hrs,p.panel, p.battery,p.battery_warranty
     FROM products p
     LEFT JOIN product_images pi ON p.id = pi.product_id
     LEFT JOIN product_colors pc ON pi.color_id = pc.id
@@ -33,6 +33,11 @@ if ($product_id > 0) {
             'discount' => '',
             'is_popular' => '',
             'is_vehicle' => '',
+            'top_speed' => '',
+            'full_charge_in_hrs' => '',
+            'battery' => '',
+            'battery_warranty' => '',
+            'panel' => '',
             'images' => [],
             'colors' => []
         ];
@@ -49,6 +54,11 @@ if ($product_id > 0) {
                 $product['discount'] = $row['discount'];
                 $product['is_popular'] = $row['is_popular'];
                 $product['is_vehicle'] = $row['is_vehicle'];
+                $product['top_speed'] =  $row['top_speed'];
+                $product['full_charge_in_hrs'] =  $row['full_charge_in_hrs'];
+                $product['battery'] = $row['battery'];
+                $product['panel'] = $row['panel'];
+                $product['battery_warranty'] = $row['battery_warranty'];
             }
 
             $color = $row['color'];

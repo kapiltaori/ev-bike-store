@@ -16,35 +16,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <!--  animejs -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!--  animejs -->
-    <!--  owl css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <!--  owl css -->
   </head>
   <body>
     <!-- Fixed Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid mx-3">
+      <div class="container-fluid mx-3 d-flex align-items-center">
         <a
           class="navbar-brand d-flex flex-column align-items-center justify-content-center"
           href="index.html"
         >
           <img src="./image/battre_logo.png" alt="Brand Logo" />
-          <span class="navbar-brand-text mt-1 fw-bold">Electric Vehicles</span>
+          <span class="navbar-brand-text mt-1 fw-bolder"
+            >Electric Vehicles</span
+          >
+        </a>
+        <div class="vertical-line mx-3"></div>
+        <a class="navbar-brand lh-1 text-center mx-3" href="another_brand.html">
+          <span class="h6 lh-2 fw-bolder"
+            >Vishvakariya Automotive <br />
+            Private Limited</span
+          >
         </a>
         <button
           class="navbar-toggler"
@@ -57,7 +48,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse ml-20" id="navbarNav">
+        <div class="collapse navbar-collapse ml-5" id="navbarNav">
           <ul class="navbar-nav me-auto gap-2">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
@@ -118,38 +109,44 @@
           <div class="">
             <div class="time_box d-flex">
               <div class="time">
-                <h1>60 :</h1>
+                <h1><span id="days"></span> :</h1>
                 <span>DAYS</span>
               </div>
               <div class="time">
-                <h1>24 :</h1>
+                <h1><span id="hours"></span> :</h1>
                 <span>HOURS</span>
               </div>
               <div class="time">
-                <h1>58 :</h1>
+                <h1><span id="minutes"></span> :</h1>
                 <span>MINUTES</span>
               </div>
               <div class="time">
-                <h1>42</h1>
+                <h1><span id="seconds"></span></h1>
                 <span>SECONDS</span>
               </div>
             </div>
 
             <h2>Lunching New Bike</h2>
             <p>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              Launching your most loving and popular
+              <span class="fw-bold">Storie</span> EV in
+              <span class="fw-bold">Midnight Black </span> color.
             </p>
 
-            <div class="button flex">
-              <button class="btn1">Book Test Drive</button>
-              <button class="btn2">Buy Now</button>
+            <div class="button flex justify-content-center">
+              <button class="btn1" data-id="4" id="home_view_details">
+                View Details
+              </button>
             </div>
           </div>
         </div>
         <div class="right">
           <div class="ani_image">
-            <img src="image/bike.png" alt="" />
+            <img
+              width="100%"
+              src="image/products/storie/storie_midnight_black_home.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -157,360 +154,105 @@
     <section class="latest top">
       <div class="scontainer">
         <div class="heading">
-          <h1>Latest Popular Bike</h1>
+          <h1>Latest Popular EV Vehicles</h1>
           <div class="lines flex1">
             <div class="line"><i class="fas fa-circle"></i></div>
-            <button>50% OFF</button>
+            <button>Offers</button>
             <div class="line line2"><i class="fas fa-circle"></i></div>
           </div>
         </div>
 
-        <div class="content grid top">
-          <div class="box">
-            <div class="img">
-              <img src="image/l1.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l2.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l3.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l4.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l5.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l6.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
+        <div class="content top">
+          <div class="row mt-4 row-gap-4 latest w-100" id="product-list"></div>
         </div>
       </div>
     </section>
     <section class="slider top">
       <div class="scontainer">
-        <div class="owl-carousel owl-theme owl-one">
-          <div class="item flex">
-            <div class="left">
-              <p>(Fashion , Twin Disc)</p>
-              <h1>KTM 125 DUKE</h1>
-              <span></span>
-              <ul>
-                <li>- Engine Cc : 370.0cc</li>
-                <li>- Max Power : 14.5 bhp @ 9250 rpm</li>
-                <li>- Tank Capacity : 10.2 L</li>
-                <li>- Wheelbase : 1366 mm</li>
-                <li>- Cooling : Liquid Cooled</li>
-                <li>- Max Torque : 12 Nm @ 8000 rpm</li>
-              </ul>
-              <h2>Price : $1999.99</h2>
-              <button class="btn2">Buy Now</button>
-            </div>
-            <div class="right">
-              <div class="ani_image">
-                <img src="image/bike2.png" alt="" />
-              </div>
-            </div>
+        <div class="item flex">
+          <div class="left">
+            <h1>Our EV Vehicles</h1>
+            <span></span>
+            <ul>
+              <li><i class="fa-solid fa-check"></i> Electrify your ride</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Most affordable electric
+                scooter
+              </li>
+              <li><i class="fa-solid fa-check"></i> Speed: 60-75 kmph</li>
+              <li><i class="fa-solid fa-check"></i> Battery: 2W battery</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Charging: Fast charging
+                capability
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Range: 100 to 150 kms per
+                charge
+              </li>
+              <li><i class="fa-solid fa-check"></i> Modern Features</li>
+              <li><i class="fa-solid fa-check"></i> Comfortable</li>
+            </ul>
           </div>
-          <div class="item flex">
-            <div class="left">
-              <p>(Fashion , Twin Disc)</p>
-              <h1>KTM 125 DUKE</h1>
-              <span></span>
-              <ul>
-                <li>- Engine Cc : 370.0cc</li>
-                <li>- Max Power : 14.5 bhp @ 9250 rpm</li>
-                <li>- Tank Capacity : 10.2 L</li>
-                <li>- Wheelbase : 1366 mm</li>
-                <li>- Cooling : Liquid Cooled</li>
-                <li>- Max Torque : 12 Nm @ 8000 rpm</li>
-              </ul>
-              <h2>Price : $1999.99</h2>
-              <button class="btn2">Buy Now</button>
-            </div>
-            <div class="right">
-              <div class="ani_image">
-                <img src="image/bike2.png" alt="" />
-              </div>
+          <div class="right">
+            <div class="ani_image text-center">
+              <img src="image/all_ev.png" alt="" />
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="Popular latest slider">
-      <div class="scontainer">
-        <div class="heading">
-          <h1>Latest Popular Bike</h1>
-          <div class="lines flex1">
-            <div class="line"><i class="fas fa-circle"></i></div>
-            <button>50% OFF</button>
-            <div class="line line2"><i class="fas fa-circle"></i></div>
-          </div>
-        </div>
-        <div class="owl-carousel owl-theme owl-two">
-          <div class="box">
-            <div class="img">
-              <img src="image/l1.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l2.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l3.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/l4.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="wrapper top">
-      <div class="scontainer">
-        <div class="text">
-          <p>(World's Thinnest SUPER DUKE)</p>
-          <h1>1290 Super Duke Gt 2021</h1>
-          <h3>Price : $5168.00</h3>
-          <button class="btn2">Buy Now</button>
-        </div>
-        <div class="ani_image">
-          <img src="image/bike3.png" alt="" />
-        </div>
-      </div>
-    </section>
-    <section class="latest Assesories top">
+    <section class="latest top">
       <div class="scontainer">
         <div class="heading">
           <h1>Choose Bike Assesories</h1>
-          <div class="lines flex1">
-            <div class="line"><i class="fas fa-circle"></i></div>
-            <button>25% OFF</button>
-            <div class="line line2"><i class="fas fa-circle"></i></div>
-          </div>
         </div>
 
-        <div class="content grid top">
+        <div class="content grid top my-5 pb-5">
           <div class="box">
             <div class="img">
-              <img src="image/a1.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
+              <img
+                src="image/accessories/battery_1.png"
+                width="250"
+                alt="battery"
+              />
             </div>
 
             <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
+              <h3>Scooter Battery</h3>
+              <p>2kW Detachable LFO/NMC Battery</p>
+              <h2><i class="fa-solid fa-indian-rupee-sign"></i> 2500</h2>
               <button>Buy Now</button>
             </div>
           </div>
           <div class="box">
             <div class="img">
-              <img src="image/a2.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
+              <img
+                src="image/accessories/battery_1.png"
+                width="250"
+                alt="battery"
+              />
             </div>
 
             <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
+              <h3>Scooter Battery</h3>
+              <p>2kW Detachable Lithium Ion (NMC) Battery</p>
+              <h2><i class="fa-solid fa-indian-rupee-sign"></i> 3500</h2>
               <button>Buy Now</button>
             </div>
           </div>
           <div class="box">
             <div class="img">
-              <img src="image/a3.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
+              <img
+                src="image/accessories/battery_1.png"
+                width="250"
+                alt="battery"
+              />
             </div>
 
             <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/a4.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/a5.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
-              <button>Buy Now</button>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/a6.png" alt="" />
-              <div class="flex1">
-                <label>50%</label>
-                <i class="fas fa-heart"></i>
-              </div>
-            </div>
-
-            <div class="detalis">
-              <h3>Aerion Carrbo Helmet</h3>
-              <p>(Fashion , Twin Disc)</p>
-              <h2>$699 <span>$799</span></h2>
+              <h3>Scooter Battery</h3>
+              <p>Detachable 2kW IP67-rated Battery</p>
+              <h2><i class="fa-solid fa-indian-rupee-sign"></i> 6500</h2>
               <button>Buy Now</button>
             </div>
           </div>
@@ -566,40 +308,36 @@
         </div>
 
         <div class="box">
-          <h3>Customer Services</h3>
-          <div class="flex1">
-            <ul>
-              <li>Help</li>
-              <li>Contact Us</li>
-              <li>Warranty</li>
-              <li>Terms & Conditions</li>
-              <li>Shopping information</li>
-              <li>Gift Vocher</li>
-            </ul>
-            <ul>
-              <li>My Account</li>
-              <li>Arder Status</li>
-              <li>Payment</li>
-              <li>Orders</li>
-              <li>Cancellation</li>
-            </ul>
+          <div class="logo d-flex flex-column">
+            <span class="h5 lh-2 fw-bolder"
+              >Vishvakariya Automotive <br />
+              Private Limited</span
+            >
           </div>
+          <p>
+            <i class="fa-regular fa-user"></i>
+            <span class="fw-bolder">Vinit Kariya</span> <br />
+            <span class="mx-3">Managing Director</span> <br />
+            <i class="fa-solid fa-phone"></i> 902-863-0397, 878-846-3373 <br />
+            <i class="fa-regular fa-envelope"></i> vapl.ngp@gmail.com
+            <br /><br />
+          </p>
+          <p>GSTIN: 27AAGCV0624E1ZL</p>
         </div>
 
         <div class="box">
-          <h3>Let's stay in touch</h3>
-          <div class="input flex1">
-            <input type="email" placeholder="Email Address" />
-            <i class="fas fa-arrow-right-long"></i>
+          <div class="logo d-flex flex-column">
+            <span class="h5 lh-2 fw-bolder">Our Addresses </span>
           </div>
-          <p>Get Update on sales specials and more</p>
-          <div class="social_media">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-google"></i>
-          </div>
+          <br />
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Beside Autmotive Square
+            Metro Station, Kamptee Road Nagpur (MH) - 440026
+          </p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> 201, Gayatri Building, Near
+            Om Medical, 2 Lane, Golkulpeth, Nagpur (MH) - 440010
+          </p>
         </div>
       </div>
     </footer>
@@ -614,18 +352,7 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="./js/utils.js"></script>
     <script src="./js/global.js"></script>
     <script src="./js/index.js"></script>
   </body>

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 // SQL to retrieve products, their images, and colors
 $sql = "
-SELECT p.id, p.name, p.price, p.description, p.kms_per_charge, p.discount, p.is_popular, p.is_vehicle,
+SELECT p.id, p.name, p.price, p.description, p.kms_per_charge, p.discount, p.is_popular, p.is_vehicle, p.full_charge_in_hrs, p.top_speed,p.kms_per_charge,
 GROUP_CONCAT(DISTINCT pi.image_url) as images,
 GROUP_CONCAT(DISTINCT pc.color) as colors
 FROM products p
@@ -33,6 +33,8 @@ if ($result->num_rows > 0) {
                 'price' => $row['price'],
                 'description' => $row['description'],
                 'kms_per_charge' => $row['kms_per_charge'],
+                'full_charge_in_hrs' => $row['full_charge_in_hrs'],
+                'top_speed' => $row['top_speed'],
                 'discount' => $row['discount'],
                 'is_popular' => $row['is_popular'],
                 'is_vehicle' => $row['is_vehicle'],

@@ -22,22 +22,11 @@ $sql = "INSERT INTO requests (name, email, mobileNumber, date, address, isBookin
 VALUES ('$name', '$email', '$mobileNumber', '$date', '$address', $isBooking)";
 
 if ($conn->query($sql) === TRUE) {
-    // Send email
-    $to = "youremail@example.com"; // Change to your email address
-    $subject = $isBooking ? "New Booking Request" : "New Test Drive Request";
-    $message = "
-    Name: $name\n
-    Email: $email\n
-    Mobile Number: $mobileNumber\n
-    Date: $date\n
-    Address: $address\n
-    Request Type: " . ($isBooking ? "Booking" : "Test Drive") . "\n
-    ";
-    $headers = "From: noreply@example.com"; // Change to your desired sender email
-
-    mail($to, $subject, $message, $headers);
-
-    echo json_encode(["message" => "Request saved and email sent successfully."]);
+    if($isBooking) {
+        echo json_encode(["message" => "We received your vehicle booking. Thanks for showing the intrest, we will get back to you shortly!"]);
+    } else {
+        echo json_encode(["message" => "We received your test drive request. Thanks for showing the intrest, we will get back to you shortly!"]);
+    }
 } else {
     echo json_encode(["message" => "Error: " . $sql . "<br>" . $conn->error]);
 }

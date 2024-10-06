@@ -47,14 +47,32 @@ $(document).ready(function () {
             </div>
 
             <div class="detalis mt-3 text-center">
-              <h3 class="text-center">${product.name}</h3>
+              <h3 class="text-center mb-2">${product.name}</h3>
+              <div class="d-flex my-2 align-items-center justify-content-between">
+                <div>
+                  <div class="fw-bold">Riding Range</div>
+                  <div>${product?.kms_per_charge || 0} kms</div>
+                </div>
+                <div>
+                  <div class="fw-bold">Charging Time</div>
+                  <div>${product?.full_charge_in_hrs || 0} hrs</div>
+                </div>
+                <div>
+                  <div class="fw-bold">Top Speed</div>
+                  <div>${product.top_speed || 0} kmph</div>
+                </div>
+              </div>
               <p>${product.description}</p>
               <h2><i class="fa-solid fa-indian-rupee-sign"></i> ${formatPrice(
                 discountedAmount
               )}
-              <span><i class="fa-solid fa-indian-rupee-sign"></i> ${formatPrice(
-                actualAmount
-              )}</span>
+              ${
+                product.discount > 0
+                  ? `<span><i class="fa-solid fa-indian-rupee-sign"></i> ${formatPrice(
+                      actualAmount
+                    )}</span>`
+                  : ""
+              }
               </h2>
               <button class="view-details-btn" data-id="${
                 product.id
